@@ -41,7 +41,7 @@ namespace prog_intermediario_del_nexo_y_la_clase_qu1r30n
 
                 if (inf_arc == null)
                 {
-                    bas.Agregar_sino_existe(archivo_de_bandera, 0, var_fun_GG.GG_id_programa, var_fun_GG.GG_id_programa + "\n" + var_fun_GG.GG_id_programa);
+                    bas.Agregar(archivo_de_bandera, var_fun_GG.GG_id_programa + "\n" + var_fun_GG.GG_id_programa);
                 }
                 else if (inf_arc.Length == 1 && inf_arc[0] == "")
                 {
@@ -53,7 +53,7 @@ namespace prog_intermediario_del_nexo_y_la_clase_qu1r30n
                 }
                 else
                 {
-                    
+                    bas.Agregar_sino_existe(archivo_de_bandera, 0, var_fun_GG.GG_id_programa, var_fun_GG.GG_id_programa);
                 }
             }
         }

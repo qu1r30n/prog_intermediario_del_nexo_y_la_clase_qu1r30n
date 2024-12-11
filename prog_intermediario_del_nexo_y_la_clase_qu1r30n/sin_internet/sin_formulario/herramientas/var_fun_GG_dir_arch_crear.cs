@@ -70,9 +70,10 @@ namespace prog_intermediario_del_nexo_y_la_clase_qu1r30n.sin_internet.sin_formul
 
         static public string[,] GG_direcciones_de_entrada_datos =
             {
-            //{"id_prog","archivo_de_entrada","ids_programas_que_tienen_permiso","archivo_de_entrada_al_intermediario ","archivo_de_bandera"}
-                {"CLASE_QU1R30N","C:\\XEROX\\CONFIG\\INF\\CLASE_QU1R30N\\1.TXT","NEXOPORTALARCANO","C:\\XEROX\\CONFIG\\INF\\CLASE_QU1R30N\\2.TXT","C:\\XEROX\\CONFIG\\INF\\CLASE_QU1R30N\\BANDERAS.TXT" },
-                {"NEXOPORTALARCANO","C:\\XEROX\\CONFIG\\INF\\NEXOPORTALARCANO\\2.TXT","CLASE_QU1R30N","C:\\XEROX\\CONFIG\\INF\\NEXOPORTALARCANO\\1.TXT","C:\\XEROX\\CONFIG\\INF\\NEXOPORTALARCANO\\BANDERAS.TXT" },
+            //{"0_id_prog","1_archivo_de_entrada","2_ids_programas_que_tienen_permiso","3_archivo_de_entrada_al_intermediario_o_del_programa_que_envia ","4_archivo_de_bandera"}
+                {"CLASE_QU1R30N","C:\\XEROX\\CONFIG\\INF\\CLASE_QU1R30N\\1.TXT","NEXOPORTALARCANO~NEXOPORTALARCANO_MODELO","C:\\XEROX\\CONFIG\\INF\\CLASE_QU1R30N\\2.TXT","C:\\XEROX\\CONFIG\\INF\\CLASE_QU1R30N\\BANDERAS.TXT" },
+                {"NEXOPORTALARCANO","C:\\XEROX\\CONFIG\\INF\\NEXOPORTALARCANO\\2.TXT","CLASE_QU1R30N~NEXOPORTALARCANO_MODELO","C:\\XEROX\\CONFIG\\INF\\NEXOPORTALARCANO\\1.TXT","C:\\XEROX\\CONFIG\\INF\\NEXOPORTALARCANO\\BANDERAS.TXT" },
+                {"NEXOPORTALARCANO_MODELO","C:\\XEROX\\CONFIG\\INF\\NEXOPORTALARCANO_MODELO\\2.TXT","CLASE_QU1R30N~NEXOPORTALARCANO","C:\\XEROX\\CONFIG\\INF\\NEXOPORTALARCANO_MODELO\\1.TXT","C:\\XEROX\\CONFIG\\INF\\NEXOPORTALARCANO_MODELO\\BANDERAS.TXT" },
             };
 
         

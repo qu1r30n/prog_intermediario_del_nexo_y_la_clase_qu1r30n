@@ -53,15 +53,15 @@ namespace prog_intermediario_del_nexo_y_la_clase_qu1r30n.conexion.herramientas_i
         {
             // S_1_4_ia
 
-            for (int j = 0; j < G_dir_y_datos_de_arch_transferencia.GetLength(0); j++)
+            for (int j_____ = 0; j_____ < G_dir_y_datos_de_arch_transferencia.GetLength(0); j_____++)
             {
                 //{"id_prog","archivo_de_entrada","ids_programas_que_tienen_permiso","archivo_de_entrada_al_intermediario ","archivo_de_bandera"}
-                string id_prog = G_dir_y_datos_de_arch_transferencia[j, 0];
-                string archivo_de_entrada = G_dir_y_datos_de_arch_transferencia[j, 1];
-                string ids_programas_que_tienen_permiso = G_dir_y_datos_de_arch_transferencia[j, 2];
+                string id_prog = G_dir_y_datos_de_arch_transferencia[j_____, 0];
+                string archivo_de_entrada = G_dir_y_datos_de_arch_transferencia[j_____, 1];
+                string ids_programas_que_tienen_permiso = G_dir_y_datos_de_arch_transferencia[j_____, 2];
                 
-                string archivo_de_entrada_al_intermediario = G_dir_y_datos_de_arch_transferencia[j, 3];
-                string archivo_de_bandera = G_dir_y_datos_de_arch_transferencia[j, 4];
+                string archivo_de_entrada_al_intermediario = G_dir_y_datos_de_arch_transferencia[j_____, 3];
+                string archivo_de_bandera = G_dir_y_datos_de_arch_transferencia[j_____, 4];
 
                 // Leer datos de usuarios desde un archivo
                 string[] usuarios_lectura = bas.Leer(archivo_de_bandera);
