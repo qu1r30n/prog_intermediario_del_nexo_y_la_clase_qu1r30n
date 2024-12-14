@@ -88,12 +88,8 @@ namespace prog_intermediario_del_nexo_y_la_clase_qu1r30n.conexion.herramientas_i
                         }
 
                         // Eliminar filas relacionadas con múltiples programas del archivo
-                        bas.eliminar_fila_PARA_MULTIPLES_PROGRAMAS(
-                            archivo_de_bandera,
-                            0,
-                            var_fun_GG.GG_id_programa,
-                            G_caracter_para_transferencia_entre_archivos[0]
-                        );
+                        
+                        bas.limpiar_todo_el_archivo(archivo_de_entrada_al_intermediario, donde_inica: 1);
 
                         // Comentado: Reemplazo del archivo con un mensaje de "sin información"
                         // bas.cambiar_archivo_con_arreglo(G_dir_arch_transferencia[id_atras_actual_adelante_2[1]], new string[] { "sin_informacion" });

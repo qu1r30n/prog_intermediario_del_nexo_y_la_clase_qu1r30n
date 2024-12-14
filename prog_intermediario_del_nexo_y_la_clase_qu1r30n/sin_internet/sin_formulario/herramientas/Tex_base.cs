@@ -91,7 +91,19 @@ namespace prog_intermediario_del_nexo_y_la_clase_qu1r30n.sin_internet.sin_formul
         
         public void Agregar(string direccion_archivos, string agregando)
         {
-            StreamWriter sw = new StreamWriter(direccion_archivos, true);
+            StreamWriter sw = null;
+            
+            while (sw == null)
+            {
+                try
+                {
+                    sw = new StreamWriter(direccion_archivos, true);
+                }
+                catch
+                {
+                }
+            }
+
             sw.WriteLine(agregando);
             sw.Close();
 
@@ -103,7 +115,22 @@ namespace prog_intermediario_del_nexo_y_la_clase_qu1r30n.sin_internet.sin_formul
             string[] pos_split;
             int[] posiciones;
 
-            StreamReader sr = new StreamReader(direccion_archivo);
+
+            StreamReader sr = null;
+            while (sr == null)
+            {
+                try
+                {
+                    sr = new StreamReader(direccion_archivo);
+                }
+                catch
+                {
+                }
+                
+            }
+            
+
+
 
             if (pos_string == null)
             {
@@ -116,7 +143,6 @@ namespace prog_intermediario_del_nexo_y_la_clase_qu1r30n.sin_internet.sin_formul
                     }
                 }
             }
-
             else
             {
                 pos_split = pos_string.Split(caracter_separacion);
@@ -164,13 +190,85 @@ namespace prog_intermediario_del_nexo_y_la_clase_qu1r30n.sin_internet.sin_formul
             return t2;
         }
 
-        
 
-        
 
-        
+
+
+
 
         //del texbase mas nuevo
+
+        public void limpiar_todo_el_archivo(string direccion_archivo, object caracter_separacion_objeto = null, int donde_inica = 0)
+        {
+
+            StreamReader sr = null;
+            while (sr == null)
+            {
+
+
+                try
+                {
+                    sr = new StreamReader(direccion_archivo);
+
+                }
+                catch (Exception e)
+                {
+                    //string[] checador = Leer(var_fun_GG.GG_direccion_control_errores_try);
+                    //chequeo_error_try(direccion_archivo, e, checador[1]);
+                }
+            }
+
+            string dir_tem = direccion_archivo.Replace(".TXT", "_TEM.TXT");
+            StreamWriter sw = new StreamWriter(dir_tem, true);
+
+
+            try
+            {
+                int cont = 0;
+                while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+                {
+
+                    string linea = sr.ReadLine();//leemos linea y lo guardamos en linea
+
+                    if (linea != null)
+                    {
+                        if (cont < donde_inica)
+                        {
+
+                            sw.WriteLine(linea);
+                        }
+                        
+                    }
+                    cont++;
+                }
+
+
+
+                sr.Close();
+                sw.Close();
+
+                File.Delete(direccion_archivo);//borramos el archivo original
+                File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+
+
+
+
+
+
+
+            }
+            catch (Exception error)
+            {
+                sr.Close();
+                sw.Close();
+                File.Delete(dir_tem);//borramos el archivo temporal
+
+
+            }
+
+
+        }
+
 
         public void eliminar_fila_PARA_MULTIPLES_PROGRAMAS(string direccion_archivo, int columna_a_comparar, string comparar, object caracter_separacion_objeto = null, int donde_inica = 0)
         {
